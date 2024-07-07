@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS 3 Practice</title>
+</head>
+<body>
+    
+    <script>
+        // console.log(window);
+        // alert('Hello! Boss');
+
+        function start(){
+            console.log('Start');
+        }
+
+        // function proccess(){
+        //     setTimeout(function() {
+        //         console.log('proccess');
+        //     }, 10000); 
+        // }
+        function proccess(callback){
+            setTimeout(function() {
+                console.log('proccess');
+                callback();
+            }, 10000); 
+        }
+
+        function finish(){
+            console.log('finish');
+        }
+
+        start();
+        proccess(function() {
+            finish();
+        });
+        //finish();
+    </script>
+</body>
+</html>

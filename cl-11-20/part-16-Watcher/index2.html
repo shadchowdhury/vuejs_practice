@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue Computed Property Watcher</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input class="input" v-model="firstName" placeholder="First Name">
+    <input class="input" v-model="lastName" placeholder="Last Name">
+    <p>Full Name: {{ fullName }}</p>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          firstName: '',
+          lastName: ''
+        }
+      },
+      computed: {
+        fullName() {
+          return `${this.firstName} ${this.lastName}`;
+        }
+      },
+      watch: {
+        fullName(newValue, oldValue) {
+          console.log('New Full Name:', newValue);
+          console.log('Old Full Name:', oldValue);
+        }
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>

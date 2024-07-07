@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue Js 'Event Modifier'</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>This is Vue JS 3 prectice page</h2>
+    </header>
+
+    <div id="app">
+        <!-- Using Event Modifier -->
+        <!-- <input type="text" @keyup.enter="handleKeyup"> -->
+        <!-- here @keyup is event and enter is Modifier -->
+
+        <form @submit.prevent="handleFormSubmit">
+            <h3>Enter you name:</h3>
+            <input type="text" @keyup="handleKeyup">
+            <p>Welcome {{ name }}!</p>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <hr><br>
+        <div class="card" @click.left="handleCardClick">
+            <button @click.stop="handleViewClick">View</button>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js 3 Practice: Use of key in loops</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>VUE JS 3 Practice Page</h1>
+    </header>
+
+    <div id="app">
+        <h3>Skills:</h3>
+        <input type="text" class="input" v-model="newSkill.name">
+        <button class="button" @click="addSkill()">Add</button>
+        <ul>
+            <li v-for="(skill, i) in skills" @click="removeSkill(i)" :key="skill.name">
+                <p>
+                    {{ i+1 }}. {{ skill.name }} ({{ skill.experience }}) <br>
+                    <input type="text" class="input" placeholder="remark" @click.stop>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js 3 Practice: Watcher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>VUE JS 3 Practice Page</h1>
+    </header>
+
+    <div id="app">
+
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="text" class="input" v-model="mobile" placeholder="Enter 11 digit mobile nuber here">
+        <br>
+
+        <label for="mobile">Name:</label><br>
+        <input type="text" class="input" v-model="name.firstName" placeholder="Enter first name">
+        <input type="text" class="input" v-model="name.lastName" placeholder="Enter last name">
+        <br>
+
+
+        <button class="button" @click="addItem">Add Item</button>
+        <ul>
+            <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+        </ul>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

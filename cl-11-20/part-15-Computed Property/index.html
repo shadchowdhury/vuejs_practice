@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js 3 Practice: List rendering of object and numbers</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>VUE JS 3 Practice Page</h1>
+    </header>
+
+    <div id="app">
+        <input type="text" class="input" v-model="review" placeholder="Write your review">
+        <h3>Skills:</h3>
+        <ul>
+            <li v-for="(skill,i) in skills" :key="skill.name" @click="removeSkill(i)">
+                <p>{{ skill.name }} - {{ skill.experience }}</p>
+            </li>
+        </ul>
+
+        <h3>Total:{{ totalCount1 }}</h3>
+
+        <br><br>
+
+        <h3>Experienced Skills:</h3>
+        <ul>
+            <li v-for="(skill,i) in experiencedSkills" :key="skill.name" @click="removeSkill(i)">
+                <p>{{ skill.name }} - {{ skill.experience }}</p>
+            </li>
+        </ul>
+    </div>   
+
+    <script src="app.js"></script>
+</body>
+
+</html>

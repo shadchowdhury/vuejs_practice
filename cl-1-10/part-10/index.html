@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS 3 Practice: Style Binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header>
+        <h1>VUE JS 3 Practice Page</h1>
+    </header>
+
+    <div id="app">
+        
+        <div style="display: flex;">
+            <input type="text" class="input" v-model="bgColor" placeholder="background-color">&nbsp;
+            <input type="color" v-model="bgColor">
+        </div>
+        <br>
+        <div style="display: flex;">
+            <input type="text" class="input" v-model="textColor" placeholder="text-color">&nbsp;
+            <input type="color" v-model="textColor">
+        </div>
+        <br>
+
+        <div class="card" :style="{backgroundColor: bgColor, color: textColor}">
+            <h3>Card</h3>
+        </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

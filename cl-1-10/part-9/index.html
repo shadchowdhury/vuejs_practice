@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS 3 Practice: Class Binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header>
+        <h1>VUE JS 3 Practice Page</h1>
+    </header>
+
+    <div id="app">
+        <button class="button" :class="{active : activeClass=='red'}" @click="setClass('red')">Red</button>
+        <button class="button" :class="{active : activeClass=='green'}" @click="setClass('green')">Green</button>
+        <button class="button" :class="{active : activeClass=='blue'}" @click="setClass('blue')">Blue</button>
+        
+        <button :class="['button', 'active']">Always Active</button>
+
+        <div :class="activeClass"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

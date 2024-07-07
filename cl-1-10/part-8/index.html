@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue Js '2 way data binding'</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>This is Vue JS 3 prectice page</h2>
+    </header>
+
+    <div id="app">
+        <h3>Enter a number: </h3>
+        <!-- <input :value="num" type="text" @input="handleInput"> -->
+        <!--2 way data binding-->
+        <input type="text" v-model.number="num">
+        <br>
+        <button @click="getDouble">Get Double</button>
+        <button @click="getSquare">Get Square</button>
+        <button @click="addTen">Add 10</button>
+        <button @click="reset">Reset</button>
+        <hr><br>
+        <label>Entered Number: </label> {{ num }}
+        <br>
+        <label>Result: </label> {{ result }}
+        <hr><br><br>
+        <div>Checked names: {{ checkedNames }}</div>
+
+        <input type="checkbox" value="Jack" v-model="checkedNames" />
+        <label for="jack">Jack</label>
+
+        <input type="checkbox" value="John" v-model="checkedNames" />
+        <label for="john">John</label>
+
+        <input type="checkbox" value="Mike" v-model="checkedNames" />
+        <label for="mike">Mike</label>
+
+        <hr><br><br>
+        <div>Picked: {{ picked }}</div>
+
+        <input type="radio" id="one" value="One" v-model="picked" />
+        <label for="one">One</label>
+
+        <input type="radio" id="two" value="Two" v-model="picked" />
+        <label for="two">Two</label>
+
+        <hr><br><br>
+        <span> Selected: {{ selected }}</span><br>
+        <select v-model="selected">
+            <option disabled value="">Please select one</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+
+        <br><br>
+        <hr><br>
+        <p>Hello {{ myName }}</p>
+        <form>Name: <input type="text" v-model.trim="myName" /></form>
+
+        <br>
+        <hr><br><br>
+        <select v-model="selected">
+            <option v-for="option in options" :value="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+
+        <div>Selected: {{ selected }}</div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

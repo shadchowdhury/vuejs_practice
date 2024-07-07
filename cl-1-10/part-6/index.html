@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Vue Js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>This is Vue JS 3 prectice page</h2>
+    </header>
+
+    <div id="app">
+        <h3>Counter: {{ count }}</h3>
+
+        <button @click="increase($event, 1)">Increment 1</button>
+        <button @click="decrease(1)">Decrement 1</button>
+        <br>
+        <button @click="increase($event, 2)">Increment 2</button>
+        <button @click="decrease(2)">Decrement 2</button>
+        <br><br><br>
+        <hr>
+        <button @click="test($event)">test</button>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+
+
