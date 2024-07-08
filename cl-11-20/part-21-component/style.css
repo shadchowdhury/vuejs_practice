@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #1f2c46;
+    color: #41b883;
+    font-size: 22px;
+    padding: 22px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 4px 7px;
+    margin: 5px;
+}
+
+#app {
+    padding: 33px;
+    margin: 15px;
+}
+
